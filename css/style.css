@@ -325,7 +325,7 @@ button:hover {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     max-width: 375px !important;
-    padding: 0 2rem 5rem 2rem;
+    padding: 0 1.5rem 5rem 1.5rem;
   }
   .heading-container {
     display: -webkit-box;
@@ -358,8 +358,14 @@ button:hover {
     padding: 0 1.5rem 2rem 1.5rem;
         grid-template-areas: "pageview" "slider" "price" "billing" "divider" "footer" "footer";
   }
+  .slider-container .sliding-bar .rangeslider {
+    width: 100%;
+  }
   .slider-container .pageview {
     padding: 3rem 0;
+  }
+  .slider-container .price span {
+    font-weight: 300;
   }
   .slider-container .billing-options {
     -webkit-box-pack: center;
@@ -370,6 +376,7 @@ button:hover {
     padding: 0 1rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    letter-spacing: 0;
   }
   .slider-container .billing-options .option:not(:first-child) {
     margin-left: 5px;
@@ -411,9 +418,6 @@ button:hover {
   }
   .slider-container {
     padding: 0 1rem 2rem 1rem;
-  }
-  .slider-container .sliding-bar .rangeslider {
-    width: 100%;
   }
   .slider-container .divider {
     padding: 0.5rem 0;

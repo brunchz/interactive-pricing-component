@@ -272,7 +272,7 @@ button{
     main{
         box-sizing: border-box;
         max-width: 375px!important;
-        padding: 0 2rem 5rem 2rem;
+        padding: 0 1.5rem 5rem 1.5rem;
     }
     .heading-container{
         display: flex;
@@ -303,8 +303,19 @@ button{
         "divider"
         "footer"
         "footer";
+        .sliding-bar{
+            .rangeslider{
+                width:100%;
+            }
+        }
         .pageview{
             padding: 3rem 0;
+        }
+        .price{
+            span{
+                font-weight: 300;
+            }   
+            
         }
         .billing-options{
             justify-content: center;
@@ -312,6 +323,7 @@ button{
             width: 100%;
             padding:0 1rem;
             box-sizing: border-box;
+            letter-spacing: 0;
             .option:not(:first-child){
                 margin-left:5px;
             }
@@ -355,12 +367,6 @@ button{
 
     .slider-container {
         padding:0 1rem 2rem 1rem;
-        .sliding-bar{
-            .rangeslider{
-                width:100%;
-            }
-            
-        }
         .divider{
             padding: 0.5rem 0;
         }
