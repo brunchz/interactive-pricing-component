@@ -320,6 +320,8 @@ button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background-position: 0 -45vh;
+    background-size: cover;
   }
   main {
     -webkit-box-sizing: border-box;
