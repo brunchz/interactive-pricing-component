@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <section>
+      <div class="heading-container">
+        <h3>Simple Traffic-based pricing</h3>
+        <span> Sign-up for our 30-day trial. No credit card required.</span>
+      </div>
+    </section>
+    <section>
+      <div class="slider-container flex-center">
+        <div class="pageview flex-center"><span> 100K PAGEVIEWS</span></div>
+          <div class="price flex-center"><h3>$16.00<span>/ month</span></h3></div>
+        <div class="sliding-bar flex-center">
+
+          <input type="range" min="1" max="100" value="50" name="rangeslider" class="rangeslider">
+        </div>
+        <div class="billing-options">
+          <div class="option"><span>Monthly Billing</span> </div>
+          <label class="switch">
+            <input type="checkbox" name="billing-option" >
+            <span class="billing-selector round"></span>
+          </label>
+          <div class="option"><p>Yearly Billing</p> </div>
+          <div class="discount mobile"><span> -25%</span></div>
+          <div class="discount desktop"><span> 25% discount</span></div>
+        </div>
+        <div class="divider"></div>
+          <div class="checklist">
+            <div class="item"><p>Unlimited websites</p> </div>
+            <div class="item"><p>100% data ownership</p></div>
+            <div class="item"><p>Email reports</p> </div>
+          </div>
+          <div class="signup">
+            <button>Start my trial</button>
+          </div>
+      </div>
+    </section>
+  </main>
+  
+
+  </div>
+</body>
+</html>

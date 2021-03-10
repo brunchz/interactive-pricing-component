@@ -1,0 +1,374 @@
+
+// COLORS //
+$Soft-Cyan: hsl(174, 77%, 80%); // (Full Slider Bar)
+$Strong-Cyan: hsl(174, 86%, 45%); //(Slider Backround)
+$Stronger-Cyan: hsl(174, 85%, 40%); //(Slider Backround)
+$Light-Grayish-Red : hsl(14, 92%, 95%); //(Discount Background)
+$Light-Red: hsl(15, 100%, 70%); //(Discount Text)
+$Pale-Blue: hsl(226, 100%, 87%); //(CTA Text)
+
+$White: hsl(0, 0%, 100%); // (Pricing Component Background)
+$Very-Pale-Blue: hsl(230, 100%, 99%); //(Main Background)
+$Light-Grayish-Blue: hsl(224, 65%, 95%); //(Empty Slider Bar)
+$Grayish-Blue : hsl(225, 20%, 60%); //(Text)
+$Dark-Desaturated-Blue : hsl(227, 35%, 25%); //(Text & CTA Background)
+
+// FONTS //
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+body{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    color:$Dark-Desaturated-Blue;
+    background-image: url("../images/bg-pattern.svg");
+    background-color: $Very-Pale-Blue;
+    background-position: 0 -20vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+main{
+    margin: 0 auto;
+    padding: 0;
+
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-size: 25%;
+    padding:6rem 0;
+    h3{
+        font-size: 2rem;
+        font-weight: 800;
+        margin:0.5rem 0;
+    }
+    span{
+        font-size: 1rem;
+        font-weight: 300;
+        color:$Grayish-Blue;
+    }
+}
+
+.slider-container{
+    display: grid;
+    background-color: $White;
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    grid-template-columns: 1fr 1fr; 
+    grid-auto-rows: minmax(1fr, auto);
+    grid-template-areas:
+    "pageview price"
+    "slider slider"
+    "billing billing"
+    "divider divider"
+    "footer footer";
+    .pageview{
+        grid-area:pageview;
+        font-size:1rem;
+        font-weight: 800;
+        color:$Grayish-Blue;
+        letter-spacing: 2px;
+    }
+    .price{
+        font-size: 2rem;
+        font-weight: 800;
+        grid-area:price;
+        span{
+            top:-10px;
+            right:-10px;
+            position: relative;
+            font-size: 1rem;
+            color: $Grayish-Blue;
+        }
+    }
+    .sliding-bar{
+        grid-area:slider;
+        .rangeslider{
+            -webkit-appearance: none;
+            width:80%;
+            height:10px;
+            background-color: $Light-Grayish-Blue;
+            outline: none;
+            opacity: 0.8;
+            border-radius: 100px;
+            margin-top: -1px;
+            &:hover{
+                &::-webkit-slider-thumb{
+                    -webkit-transition: .3s;
+                    transition: .3s;
+                    background-color: $Stronger-Cyan;
+                }
+            }
+            &::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                appearance: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color:$Strong-Cyan;
+                background-image: url('../images/icon-slider.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                box-shadow: 0 5px 30px $Strong-Cyan;
+                cursor:pointer;
+                
+            }
+            &::-moz-slider-range-thumb{
+                width: 25px;
+                height: 25px;
+                background-color: $Strong-Cyan;
+                background-image: url('../images/icon-slider.svg');
+                background-repeat: no-repeat;
+                cursor:pointer;
+            }
+        }
+    }
+    .billing-options{
+        grid-area:billing;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding:0 5rem;
+        color:$Grayish-Blue;
+        font-weight: 800;
+        padding: 2rem 3.5rem 2rem 8rem ;
+        .discount{
+            background-color:$Light-Grayish-Red;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            color:$Light-Red;
+            padding: 0.2rem 0.5rem;
+        }
+    
+    }
+    .divider{
+        grid-area: divider;
+        width: 100%;
+        border-bottom: 1px solid rgba(237, 240, 255, 0.61);
+    }
+    .checklist{
+        padding:1rem 2rem;
+        .item{
+            p{
+                color:$Grayish-Blue;
+                &::before{
+                    margin-right: 1rem;
+                    content: url('../images/icon-check.svg');
+                }
+            }
+
+        }
+    }
+    .signup{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+    }
+
+
+button{
+    appearance: none;
+    border: none;
+    padding: 1rem 3.5rem;
+    background-color: $Dark-Desaturated-Blue;
+    color:$Very-Pale-Blue;
+    font-weight: 300;
+    border-radius: 100px;
+    letter-spacing: 1.15px;
+    outline: none;
+    &:hover{
+        cursor:pointer;
+        box-shadow: 0 5px 10px rgba(68, 68, 68, 0.2);
+    }
+}
+
+.switch{
+    position: relative;
+    width:40px;
+    height:24px;
+    input{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .billing-selector{
+        position: absolute;
+        cursor: pointer;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:$Light-Grayish-Blue;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        &::before{
+            position: absolute;
+            content: "";
+            height:16px;
+            width:16px;
+            left:4px;
+            bottom:4px;
+            background-color: $White;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+    input:checked + .billing-selector{
+        background-color: $Strong-Cyan;
+    }
+    input:focus + .billing-selector{
+        box-shadow: 0 0 1px $Strong-Cyan;
+    }
+    input:checked + .billing-selector:before{
+        -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+        transform: translateX(16px);
+    }
+    .round{
+        border-radius: 24px;
+        &::before{
+            border-radius: 50%;
+        }
+    }
+}
+@media only screen and (min-width:540px){
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+}
+@media only screen and(max-width:415px){
+    .desktop{
+        display: none;
+    }
+    body{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    main{
+        box-sizing: border-box;
+        max-width: 375px!important;
+        padding: 0 2rem 5rem 2rem;
+    }
+    .heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-size: 50%;
+        h3{
+            font-size: 1.2rem;
+        }
+        span{
+            padding:0 2.5rem;
+            line-height: 1.7;
+        }
+    }
+    .slider-container{
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr; 
+        grid-auto-rows: minmax(1fr, auto);
+        box-sizing: border-box;
+        padding:0 1.5rem 2rem 1.5rem;
+        grid-template-areas:
+        "pageview"
+        "slider"
+        "price"
+        "billing"
+        "divider"
+        "footer"
+        "footer";
+        .pageview{
+            padding: 3rem 0;
+        }
+        .billing-options{
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            padding:0 1rem;
+            box-sizing: border-box;
+            .option:not(:first-child){
+                margin-left:5px;
+            }
+            .option{
+                width:auto;
+                box-sizing: border-box;
+                font-size: .7rem;
+                font-weight: 300;
+            }
+            .switch{
+                margin-left:5px;
+            }
+            .discount{
+                font-size:0.6rem;
+                top:9px;
+                right:-15px;
+                position: absolute;
+            }
+        }
+        .divider{
+            padding:1rem 0;
+        }
+        .checklist{
+            padding:1rem 0;
+            text-align: center;
+            p{
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width:320px){
+    .heading-container{
+        span{
+            padding: 0 2rem;
+        }
+    }
+    main{
+        padding: 0 1rem 5rem 1rem;
+    }
+
+    .slider-container {
+        padding:0 1rem 2rem 1rem;
+        .sliding-bar{
+            .rangeslider{
+                width:100%;
+            }
+            
+        }
+        .divider{
+            padding: 0.5rem 0;
+        }
+    .billing-options{
+        .discount{
+            padding: 0.2rem 0.3rem;
+        }
+    }
+    }
+
+}
