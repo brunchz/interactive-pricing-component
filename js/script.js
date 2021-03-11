@@ -37,10 +37,9 @@ function updatePrice(price,billing,pageview){
     
     if(billing == 'year'){
         price = price -(price * 0.25);
-        $('.price').html('<h3>$'+ price + '.00</h3><span>/ '+ billing +'</span>');
-    }else{
-        $('.price').html('<h3>$'+ price + '.00</h3><span>/ '+ billing +'</span>');
     }
+    $('.price').html('<h3>$'+ price + '.00</h3><span>/ month</span>');
+
     if(pageview == 1){
         $('.pageview').html('<span>'+ pageview +'M PAGEVIEWS</span>');
     }else{
