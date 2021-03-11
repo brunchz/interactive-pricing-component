@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <script src="./script.js"></script>
   <title>Frontend Mentor | Interactive pricing component</title>
 
 <link rel="stylesheet" href="./css/style.css">
+<script defer src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script defer src="./js/script.js"></script>
 </head>
 <body>
   <main>
@@ -21,20 +23,18 @@
     <section>
       <div class="slider-container flex-center">
         <div class="pageview flex-center"><span> 100K PAGEVIEWS</span></div>
-          <div class="price flex-center"><h3>$16.00<span>/ month</span></h3></div>
+          <div id='price' class="price flex-center"><h3>$12.00</h3><span>/ year</span></div>
         <div class="sliding-bar flex-center">
-
-          <input type="range" min="1" max="100" value="50" name="rangeslider" class="rangeslider">
+          <input type="range" min="1" max="5" value="3" name="rangeslider" class="rangeslider">
         </div>
         <div class="billing-options">
           <div class="option"><span>Monthly Billing</span> </div>
           <label class="switch">
-            <input type="checkbox" name="billing-option" >
+            <input id="billing-option" value="annual" type="checkbox" name="billing-option" checked>
             <span class="billing-selector round"></span>
           </label>
           <div class="option"><p>Yearly Billing</p> </div>
-          <div class="discount mobile"><span> -25%</span></div>
-          <div class="discount desktop"><span> 25% discount</span></div>
+          <div class="discount"><span>25%</span></div>
         </div>
         <div class="divider"></div>
           <div class="checklist">
